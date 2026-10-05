@@ -1,0 +1,768 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1088045714204639');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1088045714204639&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KRP KING</title>
+
+<style>
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #08a7ff;
+}
+
+
+/* =========================
+   MAIN HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #078ef0 0%,
+      #38b8f4 48%,
+      #b7eaff 70%,
+      #37b936 71%,
+      #09a800 100%
+    );
+}
+
+
+/* =========================
+   STADIUM / GROUND EFFECT
+========================= */
+
+.hero::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 43%;
+
+  z-index: 0;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 4px,
+      transparent 4px,
+      transparent 80px
+    ),
+
+    linear-gradient(
+      to bottom,
+      #7fd849 0%,
+      #24b90b 35%,
+      #0a9b00 100%
+    );
+
+  clip-path: polygon(
+    0 25%,
+    100% 8%,
+    100% 100%,
+    0 100%
+  );
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(92%, 720px);
+
+  margin: auto;
+
+  padding-top: 35px;
+
+  padding-bottom: 100px;
+}
+
+
+/* =========================
+   TOP TITLE
+========================= */
+
+.top-title {
+  background: #000;
+
+  color: #fff500;
+
+  font-size: clamp(22px, 5vw, 34px);
+
+  font-weight: 900;
+
+  padding: 6px 10px;
+
+  margin-bottom: 40px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  width: 225px;
+  height: 225px;
+
+  margin: 0 auto 45px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #000;
+
+  border: 5px solid #111;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Actual logo image */
+
+.logo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.main-title {
+  display: inline-block;
+
+  background: #000;
+
+  color: #fff21c;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(35px, 8vw, 52px);
+
+  font-weight: bold;
+
+  padding: 7px 15px;
+
+  margin-bottom: 32px;
+}
+
+
+/* =========================
+   JOIN BUTTON
+========================= */
+
+.join {
+  border: 3px dotted #000;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #050505;
+
+  font-size: clamp(20px, 5vw, 28px);
+
+  font-weight: 800;
+
+  padding: 14px 15px;
+
+  margin-bottom: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.join:hover {
+  background: rgba(255, 255, 255, 0.3);
+
+  transform: scale(1.02);
+}
+
+.join:active {
+  transform: scale(0.99);
+}
+
+
+/* Telegram content */
+
+.telegram {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+
+/* Telegram icons */
+
+.telegram-icon {
+  width: 25px;
+  height: 25px;
+
+  background: #000;
+
+  color: #fff;
+
+  border-radius: 50%;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+  background: #f0dc3d;
+
+  text-align: left;
+
+  padding: 15px 20px;
+
+  width: 94%;
+
+  margin: auto;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.features div {
+  font-size: clamp(15px, 3.5vw, 21px);
+
+  font-weight: 900;
+
+  margin: 10px 0;
+
+  color: #090909;
+}
+
+.check {
+  font-size: 23px;
+
+  margin-right: 12px;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+  margin-top: 20px;
+
+  color: white;
+}
+
+.timer {
+  font-size: clamp(42px, 11vw, 68px);
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    2px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.labels {
+  display: flex;
+
+  justify-content: center;
+
+  gap: clamp(15px, 5vw, 45px);
+
+  color: #53a4b8;
+
+  font-size: clamp(12px, 3vw, 18px);
+
+  font-weight: 800;
+}
+
+.labels span {
+  width: 70px;
+}
+
+
+/* =========================
+   BOTTOM BADGE
+========================= */
+
+.powered {
+  position: fixed;
+
+  right: 0;
+  bottom: 0;
+
+  z-index: 10;
+
+  background: #00172a;
+
+  color: white;
+
+  border-radius: 35px 0 0 0;
+
+  padding: 9px 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 13px;
+}
+
+
+/* Bottom logo */
+
+.bottom-logo {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* Arrow */
+
+.arrow {
+  font-size: 27px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .container {
+    width: 94%;
+
+    padding-top: 25px;
+
+    padding-bottom: 90px;
+  }
+
+
+  .top-title {
+    margin-bottom: 35px;
+  }
+
+
+  .logo {
+    width: 200px;
+    height: 200px;
+
+    margin-bottom: 42px;
+  }
+
+
+  .main-title {
+    margin-bottom: 30px;
+  }
+
+
+  .features {
+    width: 96%;
+
+    padding: 12px 15px;
+  }
+
+
+  .timer {
+    letter-spacing: 0;
+  }
+
+
+  .telegram {
+    gap: 10px;
+  }
+
+
+  .join {
+    padding: 13px 8px;
+  }
+
+
+  .powered {
+    padding: 7px 10px;
+
+    font-size: 11px;
+  }
+
+
+  .bottom-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+
+  .arrow {
+    font-size: 22px;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<section class="hero">
+
+  <div class="container">
+
+    <!-- =========================
+         TOP TITLE
+    ========================== -->
+
+    <div class="top-title">
+      NO.1 CRICKET ANALYST
+    </div>
+
+
+    <!-- =========================
+         MR REPORTS IMAGE LOGO
+         
+         IMPORTANT:
+         Put logo.jpeg in the same
+         folder as this index.html
+    ========================== -->
+
+    <div class="logo">
+      <img
+        src="logo.jpeg"
+        alt="MR Reports Logo"
+      >
+    </div>
+
+
+    <!-- =========================
+         MAIN TITLE
+    ========================== -->
+
+    <div class="main-title">
+      KRP KING
+    </div>
+
+
+    <!-- =========================
+         JOIN BUTTON
+    ========================== -->
+
+    <div
+      class="join"
+      onclick="joinTelegram()"
+      role="button"
+      tabindex="0"
+    >
+
+      <div class="telegram">
+
+        <span class="telegram-icon">
+          ➤
+        </span>
+
+        <span>
+          JOIN US NOW !!
+        </span>
+
+        <span class="telegram-icon">
+          ➤
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <div class="features">
+
+      <div>
+        <span class="check">✓</span>
+        ASIA CUP 19/20 MATCH PASS
+      </div>
+
+      <div>
+        <span class="check">✓</span>
+        IPL 75/70 TOSS PASS
+      </div>
+
+      <div>
+        <span class="check">✓</span>
+        MOST DEMANDING TIPPER
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         COUNTDOWN
+    ========================== -->
+
+    <div class="countdown">
+
+      <div class="timer">
+
+        <span id="days">00</span> :
+        <span id="hours">00</span> :
+        <span id="minutes">00</span> :
+        <span id="seconds">10</span>
+
+      </div>
+
+
+      <div class="labels">
+
+        <span>DAYS</span>
+        <span>HOURS</span>
+        <span>MINUTES</span>
+        <span>SECONDS</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       BOTTOM BADGE
+  ========================== -->
+
+  <div class="powered">
+
+    <img
+      src="logo.jpeg"
+      class="bottom-logo"
+      alt="KRP King Logo"
+    >
+
+    <div>
+      Made by<br>
+      <b>@KRP KING</b>
+    </div>
+
+    <div class="arrow">
+      →
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+/*
+   Change this date/time.
+
+   Format:
+   YYYY-MM-DDTHH:MM:SS
+
+   Example:
+   2026-09-15T20:00:00
+*/
+
+const targetDate =
+  new Date("2026-09-01T20:00:00").getTime();
+
+
+function updateCountdown() {
+
+  const now =
+    new Date().getTime();
+
+  const distance =
+    targetDate - now;
+
+
+  /* If countdown is finished */
+
+  if (distance <= 0) {
+
+    document.getElementById("days").textContent = "00";
+
+    document.getElementById("hours").textContent = "00";
+
+    document.getElementById("minutes").textContent = "00";
+
+    document.getElementById("seconds").textContent = "10";
+
+    return;
+  }
+
+
+  /* Calculate days */
+
+  const days =
+    Math.floor(
+      distance /
+      (1000 * 60 * 60 * 24)
+    );
+
+
+  /* Calculate hours */
+
+  const hours =
+    Math.floor(
+      (distance %
+        (1000 * 60 * 60 * 24)) /
+      (1000 * 60 * 60)
+    );
+
+
+  /* Calculate minutes */
+
+  const minutes =
+    Math.floor(
+      (distance %
+        (1000 * 60 * 60)) /
+      (1000 * 60)
+    );
+
+
+  /* Calculate seconds */
+
+  const seconds =
+    Math.floor(
+      (distance %
+        (1000 * 60)) /
+      1000
+    );
+
+
+  /* Display countdown */
+
+  document.getElementById("days").textContent =
+    String(days).padStart(2, "0");
+
+
+  document.getElementById("hours").textContent =
+    String(hours).padStart(2, "0");
+
+
+  document.getElementById("minutes").textContent =
+    String(minutes).padStart(2, "0");
+
+
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2, "10");
+}
+
+
+/* Start countdown */
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+updateCountdown();
+
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+function joinTelegram() {
+fbq('track', 'subscribe');  
+setTimeout(function() {                                                             
+  window.location.href =
+    "https://t.me/+FydaunHBjDowY2Y9";
+},500);
+}
+</script>
+
+</body>
+</html>
+```
